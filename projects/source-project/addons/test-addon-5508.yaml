@@ -1,0 +1,21 @@
+apiVersion: infra.k8s.rafay.dev/v3
+kind: Addon
+metadata:
+  name: test-addon-5508
+  project: source-project
+spec:
+  artifact:
+    artifact:
+      chartPath:
+        name: ""
+      repository: ""
+      revision: ""
+    options:
+      maxHistory: 10
+    type: Helm
+  namespace: test-ns-5508
+  sharing:
+    enabled: true
+    projects:
+      - name: target-project
+  version: v1
